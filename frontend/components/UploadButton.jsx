@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { uploadDocument } from "../lib/api";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function UploadButton() {
   const inputRef = useRef(null);
