@@ -15,6 +15,9 @@ async def chat(request: Request):
         return {"answer": "No documentation uploaded yet.", "sources": []}
 
     chunks = search_index(index, meta, message, top_k=5)
+    print("=== CHUNKS ===")
+    for c in chunks:
+        print(c.get("section"), c.get("page"))
 
     context_text = "\n\n".join([c["text"] for c in chunks])
     prompt = f"Answer the question based on the following context:\n{context_text}\n\nQuestion: {message}\nAnswer:"
@@ -26,8 +29,7 @@ async def chat(request: Request):
 
     answer = response.choices[0].message.content
 
-    sources = list(dict.fromkeys([f'Page {r["page"]}' for r in chunks]))
-
+    sources = list(dict.fromkeys([f'Section "{r["section"]}", page {r["page"]}' for r in chunks]))
     return {
         "answer": answer,
         "sources": sources

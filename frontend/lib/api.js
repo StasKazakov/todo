@@ -4,6 +4,7 @@ export async function sendMessage(message) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: message }),
   });
+  
   return res.json();
 }
 

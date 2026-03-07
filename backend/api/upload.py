@@ -38,7 +38,7 @@ async def upload_document(file: UploadFile):
             meta_chunks.append({
                 "text": chunk,
                 "page": page["page"],
-                "section": "Unknown"
+                "section": page["section"]
             })
 
     vectors = await create_embeddings([c["text"] for c in meta_chunks])

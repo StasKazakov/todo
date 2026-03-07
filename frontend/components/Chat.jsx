@@ -32,12 +32,12 @@ export default function Chat() {
   };
 
   return (
-    <div className="flex flex-col h-full w-full p-4 gap-2">
-      <ScrollArea className="flex-1 border rounded-md p-2 w-[75%] mx-auto min-h-[400px] max-h-[60vh]">
-        {messages.map((msg, idx) => (
-          <MessageCard key={idx} msg={msg} />
-        ))}
-        {loading && <p className="text-gray-500">Loading...</p>}
+    <div className="flex flex-1 flex-col h-full w-full p-4 gap-2">
+      <ScrollArea className="flex-1 min-h-[60vh] border rounded-md p-2 w-[75%] mx-auto max-h-[60vh]">
+          {messages.map((msg, idx) => (
+            <MessageCard key={idx} msg={msg} />
+          ))}
+          {loading && <p className="text-gray-500">Loading...</p>}
       </ScrollArea>
 
       <div className="flex gap-2 mt-2 w-[75%] mx-auto items-stretch">
