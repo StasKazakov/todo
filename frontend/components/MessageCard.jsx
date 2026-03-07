@@ -10,7 +10,7 @@ export default function MessageCard({ msg }) {
       {msg.content}
       {msg.role === "assistant" && msg.sources && (
         <div className="text-sm text-gray-400">
-          Sources: {msg.sources.map((s) => `Page ${s.page}`).join(", ")}
+          Sources: {msg.sources.join(", ")}
         </div>
       )}
     </Card>
