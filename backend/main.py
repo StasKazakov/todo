@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from api.chat import router as chat_router
 from api.health import router as health_router
 from api.upload import router as upload_router
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI()
 
