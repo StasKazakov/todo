@@ -81,6 +81,7 @@ async def upload_document(file: UploadFile):
 
     vectors = await create_embeddings([c["text"] for c in meta_chunks])
 
+    # Delete the index if it already exists
     clear_index()
     dim = len(vectors[0])
     index, meta = load_index()

@@ -12,10 +12,10 @@ def _sync_embedding(chunk: str):
     )
     return response.data[0].embedding
 
+# Async wrapper for sync embedding function
 async def create_embeddings(chunks):
     loop = asyncio.get_event_loop()
     tasks = [loop.run_in_executor(executor, _sync_embedding, c) for c in chunks]
     vectors = await asyncio.gather(*tasks)
-    print(f"All embeddings done, total chunks: {len(vectors)}")
     return vectors
 

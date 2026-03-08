@@ -6,7 +6,7 @@ logging.basicConfig(
     filename="logs.txt",
     encoding="utf-8"
 )
-
+# Delete httpx and openai logs
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("openai").setLevel(logging.WARNING)
 

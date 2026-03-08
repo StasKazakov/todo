@@ -45,16 +45,17 @@ async def chat(request: Request):
 
     matches = re.findall(r"\[(\d+)\]", answer)
     indices = set(int(m) - 1 for m in matches if int(m) <= len(chunks))
-
+    
+    # Create unique dict of sources
     sources = list(dict.fromkeys(
     f'Section "{chunks[i]["section"]}", page {chunks[i]["page"]}'
     for i in indices
     ))
-
+    # Remove source numbers from text like [1]
     answer = re.sub(r"\s*\[\d+\]", "", answer).strip()
 
     log.info(f"LLM: {answer}")
-    
+
     return {
         "answer": answer,
         "sources": sources
