@@ -47,3 +47,9 @@ def search_index(index, meta, query, top_k=5):
         if idx < len(meta):
             results.append(meta[idx])
     return results
+
+def clear_index():
+    if os.path.exists(INDEX_PATH):
+        os.remove(INDEX_PATH)
+    if os.path.exists(META_PATH):
+        os.remove(META_PATH)
