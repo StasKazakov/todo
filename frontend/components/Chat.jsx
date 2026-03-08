@@ -37,7 +37,7 @@ export default function Chat() {
           {messages.map((msg, idx) => (
             <MessageCard key={idx} msg={msg} />
           ))}
-          {loading && <p className="text-gray-500">Loading...</p>}
+          {loading && <p className="text-gray-500 pl-2">Loading...</p>}
       </ScrollArea>
 
       <div className="flex gap-2 mt-2 w-[75%] mx-auto items-stretch">

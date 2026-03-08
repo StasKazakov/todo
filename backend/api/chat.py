@@ -2,6 +2,7 @@ from fastapi import APIRouter, Request
 from services.vectorstore import load_index, search_index
 from openai import OpenAI
 import re
+from services.logger import log
 
 router = APIRouter()
 client = OpenAI()
@@ -10,6 +11,7 @@ client = OpenAI()
 async def chat(request: Request):
     data = await request.json()
     message = data.get("message", "")
+    log.info(f"USER: {message}")
 
     index, meta = load_index()
     if index is None:
@@ -18,7 +20,10 @@ async def chat(request: Request):
     chunks = search_index(index, meta, message, top_k=5)
     
     context_text = "\n\n".join([f"[{i+1}] {c['text']}" for i, c in enumerate(chunks)])
+
     prompt = f"""
+        You are a consultant who helps users work with documents.
+        You name is ToDoLLM.
         Answer the question using the context below.
         Cite sources using [number] when relevant.
 
@@ -47,6 +52,9 @@ async def chat(request: Request):
     ))
 
     answer = re.sub(r"\s*\[\d+\]", "", answer).strip()
+
+    log.info(f"LLM: {answer}")
+    
     return {
         "answer": answer,
         "sources": sources

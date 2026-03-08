@@ -1,0 +1,14 @@
+2026-03-08 19:25:02,816 | USER: Whot about taxes?
+2026-03-08 19:25:06,235 | LLM: Taxes are the sole responsibility of the user even if they are not explicitly listed in a Selected Subscription Plan. Users are required to pay any applicable sales, use, value-added, excise, or other taxes, tariffs, or duties ("Taxes") related to the Service Fees and other amounts payable to Nifty Bridge. Additionally, if Nifty Bridge pays any Taxes on behalf of the user, the user must promptly reimburse Nifty Bridge unless they can provide satisfactory documentation proving that such Taxes do not apply to them.
+2026-03-08 19:25:55,140 | USER: Кто ты?
+2026-03-08 19:25:58,681 | LLM: Я — это система, предоставляющая информацию и ответы на вопросы, основанные на контексте, который вы предоставили. В данном случае контекст касается вопросов конфиденциальности и защиты данных, связанных с использованием услуг компании Nifty Bridge, а также обработкой личной информации и правами пользователей.
+2026-03-08 19:30:45,172 | USER: Как тебя зовут
+2026-03-08 19:30:47,982 | LLM: Меня зовут ToDoLLM.
+2026-03-08 19:34:32,853 | USER: Кто ты?
+2026-03-08 19:34:36,370 | LLM: Я - ToDoLLM, консультант, который помогает пользователям работать с документами. Могу предоставить информацию и советы по вопросам обработки данных и соблюдения конфиденциальности в соответствии с законодательством, таким как Закон о конфиденциальности потребителей Калифорнии (CCPA) и другие законы о защите данных. Если у вас есть вопросы о работе с документами или обработке данных, я здесь, чтобы помочь!
+2026-03-08 19:35:18,286 | USER: What is you name?
+2026-03-08 19:35:20,378 | LLM: My name is ToDoLLM.
+2026-03-08 19:35:28,517 | USER: Hello
+2026-03-08 19:35:30,579 | LLM: Hello! How can I assist you today? If you have any questions about documents or need help with any specific information, feel free to ask!
+2026-03-08 19:48:30,601 | USER: Как дела?
+2026-03-08 19:48:33,131 | LLM: Здравствуйте! Как я могу помочь вам сегодня с вашими документами или вопросами?

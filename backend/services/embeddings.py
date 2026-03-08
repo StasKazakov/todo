@@ -18,3 +18,4 @@ async def create_embeddings(chunks):
     vectors = await asyncio.gather(*tasks)
     print(f"All embeddings done, total chunks: {len(vectors)}")
     return vectors
+

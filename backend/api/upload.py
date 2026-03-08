@@ -22,6 +22,7 @@ async def upload_document(file: UploadFile):
 
     if ext == ".pdf":
         pages = extract_text_from_pdf(BytesIO(content))
+        
     elif ext in [".txt", ".md"]:
         try:
             text = content.decode("utf-8")

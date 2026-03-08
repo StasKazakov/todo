@@ -18,8 +18,6 @@ def extract_text_from_pdf(file):
     last_end = 0
     current_section = "General"
 
-    print("=== FULL TEXT START ===")
-    print(repr(full_text[:500]))
 
     for match in section_pattern.finditer(full_text):
         if last_end < match.start():
@@ -44,10 +42,6 @@ def extract_text_from_pdf(file):
             if char_pos >= start:
                 page = num
         return page
-    
-    print("=== SECTIONS ===")
-    for s in sections[:5]:
-        print(f"section: {s['section']!r}, text[:50]: {s['text'][:50]!r}")
 
     return [
         {**s, "page": get_page(s["char_pos"])}
