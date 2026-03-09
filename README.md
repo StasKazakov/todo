@@ -2,6 +2,8 @@
 
 Чат-бот побудований на основі RAG-підходу (Retrieval-Augmented Generation), який відповідає на питання користувача на основі завантаженої документації. Підтримує формати PDF, TXT та MD.
 
+![Screenshot](./screenshot.png)
+
 ## 🌐 Демо
 
 👉 [https://todo-frontend-6zg2.onrender.com](https://todo-frontend-6zg2.onrender.com)
